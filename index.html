@@ -18,13 +18,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 100%;
+            width: 100%;
             margin: 0;
+            padding: 0;
+            overflow: hidden;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             width: 100%;
             max-width: 1475px;
         }
@@ -34,11 +38,12 @@
             color: #ffffff; /* Gold for emphasis */
         }
         .row {
+            flex-wrap: wrap;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             width: 100%;
-            margin: 20px 0;
+            margin: 15px 0;
         }
         .circle {
             width: 100px;
@@ -75,6 +80,22 @@
             margin: 0 0px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
+        @media (max-width: 768px) {
+          .circle {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        margin: 10px;
+        }
+         .category {
+        font-size: 30px;
+        padding: 10px 20px;
+        }
+         h1 {
+        font-size: 50px;
+         }
+}
+
         /* Pop culture (1st .category in the first row) */
 .row:nth-child(1) .category {
     background: linear-gradient(to right, #6A0DAD, #008CFF);
