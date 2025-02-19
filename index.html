@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კატეგორიები</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark gray instead of pure black */
+            background-image: url('file:///D:/codes/web/Adobe%20Express%20-%20file.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #F5F5F5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1475px;
+        }
+        h1 {
+            font-size: 70px;
+            margin-bottom: 50px;
+            color: #ffffff; /* Gold for emphasis */
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #00ccff; /* Refined blue tone */
+            color: #121212;
+            font-size: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s, opacity 0.3s;
+            cursor: pointer;
+            margin: 0 50px;
+            box-shadow: 0 0 10px rgba(0, 140, 255, 0.6);
+        }
+        .circle:hover {
+            background-color: #00AEEF;
+            opacity: 0.8;
+        }
+        .circle.active {
+            background-color: white;
+            color: black;
+        }
+        .category {
+            flex-grow: 1;
+            text-align: center;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 45px;
+            font-weight: bold;
+            color: white;
+            margin: 0 0px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        /* Pop culture (1st .category in the first row) */
+.row:nth-child(1) .category {
+    background: linear-gradient(to right, #6A0DAD, #008CFF);
+}
+
+/* History (2nd .category in the second row) */
+.row:nth-child(2) .category {
+    background: linear-gradient(to right, #32CD32, #228B22);
+}
+
+/* Sports (3rd .category in the third row) */
+.row:nth-child(3) .category {
+    background: linear-gradient(to right, #FFD700, #FF8C00);
+}
+
+/* Literature (4th .category in the fourth row) */
+.row:nth-child(4) .category {
+    background: linear-gradient(to right, #9370DB, #6A0DAD);
+}
+
+/* Geography (5th .category in the fifth row) */
+.row:nth-child(5) .category {
+    background: linear-gradient(to right, #FF8C00, #FF4500);
+}
+
+/* Science (6th .category in the sixth row) */
+.row:nth-child(6) .category {
+    background: linear-gradient(to right, #20B2AA, #008080);
+}
+
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const circles = document.querySelectorAll(".circle");
+            circles.forEach(circle => {
+                circle.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>კატეგორიები</h1>
+    <div class="container">
+        <div class="row">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="category">პოპ კულტურა</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <div class="row">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="category">ისტორია</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <div class="row">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="category">სპორტი</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <div class="row">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="category">ლიტერატურა</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <div class="row">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="category">გეოგრაფია</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <div class="row">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="category">სხვადასხვა</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+    </div>
+</body>
+</html>
